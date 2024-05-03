@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="t4is.uv.mx/grados"
+    xmlns:tns="t4is.uv.mx/grados" elementFormDefault="qualified">
+
+    <xs:element name="ConversionGradosCRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grados" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ConversionGradosCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultado" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ConversionGradosFRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grados" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ConversionGradosFResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultado" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="HistorialConversionesRequest"/>
+
+    <xs:element name="HistorialConversionesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="conversion" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="operacion" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
